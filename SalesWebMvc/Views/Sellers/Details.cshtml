@@ -1,0 +1,57 @@
+﻿@model SalesWebMvc.Models.Seller
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+ 
+<br />
+
+<div class="card bg-dark text-light">
+    <div class="card-header">
+        <h4 class="card-title">Seller</h4>
+    </div>
+
+    <div class="card-body bg-light">
+        <dl class="row">
+            <dt class="text-dark col-4">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="text-dark col-8">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="text-dark col-4">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="text-dark col-8">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="text-dark col-4">
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </dt>
+            <dd class="text-dark col-8">
+                @Html.DisplayFor(model => model.BirthDate)
+            </dd>
+            <dt class="text-dark col-4">
+                @Html.DisplayNameFor(model => model.BaseSalary)
+            </dt>
+            <dd class="text-dark col-8">
+                @Html.DisplayFor(model => model.BaseSalary)
+            </dd>
+            <dt class="text-dark col-4">
+                @Html.DisplayNameFor(model => model.Department)
+            </dt>
+            <dd class="text-dark col-8">
+                @Html.DisplayFor(model => model.Department.Name)
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<br />
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-secondary">Edit</a>
+    <a asp-action="Index" class="btn btn-dark">Cancel</a>
+</div>
